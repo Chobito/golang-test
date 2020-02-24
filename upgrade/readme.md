@@ -11,14 +11,14 @@ This is an Golang HTTP Server that is having 2 endpoints:
 
 ### Docker redis + go in local ( TestMode )
 
+
+
+### Docker-compose ( "Prod" Mode )
+
 ```bash
 docker-compose build
 docker-compose up
 ```
-
-### Docker-compose ( "Prod" Mode )
-
-xxxxx
 
 ## How to test it.
 

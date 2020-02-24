@@ -1,12 +1,24 @@
-# GO Crop HTTP Server 
+# GO Crop HTTP Server + Redis 
 
 ## Description.
 
+This is an Golang HTTP Server that is having 2 endpoints:
+
+1. Check the status (/status)
+2. Receive a image, crop it and upload the url of the modified image to a redis db.
+
 ## How to run it
 
-1.
+### Docker redis + go in local ( TestMode )
 
-2.
+```bash
+docker-compose build
+docker-compose up
+```
+
+### Docker-compose ( "Prod" Mode )
+
+xxxxx
 
 ## How to test it.
 
@@ -15,14 +27,22 @@
 
 ## Why I choose the libraries, the workflow, etc.
 
-1.
-2.
-3.
+* fmt:
+* log:
+* net/http:
+* go-redis/redis:
+* gorilla/mux:
+* os:
+* io:
+* desintegration/imaging:
+* image + image/color:
+* math/rand:
+* strconv:
+
 
 ### TODO
 
-1. show static files
+1. Upload the images to another directory + show static files .
 2. TLS. (https://github.com/denji/golang-tls  This example will be enough)
-3. Crop better the image.
-4. upload the images to another directory.
-5. Implement it in K8s.
+3. Crop better the image (accept all image formats).
+4. Implement it in K8s.

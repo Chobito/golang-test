@@ -1,5 +1,3 @@
-# Dockerfile References: https://docs.docker.com/engine/reference/builder/
-
 # Start from golang:1.12-alpine base image
 FROM golang:1.12-alpine
 
@@ -9,7 +7,10 @@ RUN apk update && apk upgrade && \
     apk add --no-cache bash git 
 
 # Copy the source from the current directory to the Working Directory inside the container
-COPY . .
+COPY main.go .
+COPY Dockerfile .
+COPY docker-compose.yml .
+
 # Build the Go app
 RUN go get -d -v ./
 # Expose port 8080 to the outside world

@@ -7,4 +7,9 @@ services:
     links:
     - redis
   redis:
-    image: redis
+    image: redis:alpine
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"    
+

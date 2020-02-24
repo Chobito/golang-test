@@ -12,7 +12,7 @@ This is an Golang HTTP Server that is having 2 endpoints for:
 First you need to download the repository:
 
 ```
-git clone xxxx
+git clone https://github.com/Chobito/golang-test.git
 ```
 
 ### Docker redis + go in local ( TestMode )
@@ -55,6 +55,7 @@ It will return you the status of the server.
   ```bash
   curl -X POST --form "file=@maxdefault.jpg"   localhost:8080/upload
   ```
+  
 It will post a image, crop it and upload the url of the new image to a redis.
 
 
@@ -65,7 +66,7 @@ It will post a image, crop it and upload the url of the new image to a redis.
 * go-redis/redis: This library is used on this program to connect to the redis server and upload the uri.
 * gorilla/mux: This library is to router all the Endpoints easily.
 * os: This library is needed to launch OS methods in this case open the file.
-* io: library to access to I/O primitives (printing output of the upload and copying) . 
+* io: Library to access to I/O primitives (printing output of the upload and copying) . 
 * desintegration/imaging: This library is what I used to crop the image
 * image + image/color: This libraries is needed to use desintegration cropping tool.
 * math/rand: I used it to generate random numbers
